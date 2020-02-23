@@ -14,12 +14,32 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
 	<link rel="manifest" href="assets/site.webmanifest">
-
+	<!-- Cat Cursor -->
+	<!-- <style type="text/css">* {cursor: url(http://cur.cursors-4u.net/nature/nat-10/nat927.ani), url(http://cur.cursors-4u.net/nature/nat-10/nat927.png), auto !important;}</style> -->
+	<script>
+	function myFunction() {
+    var x = document.getElementById('iframe');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+	}
+	function catFunction()
+	{
+    document.getElementById('cat').setAttribute("class", "cat");
+	}
+	</script>
 </head>
-<body>
-
+<body id="cat">	
 	<div>
-		<h1>Gina.dev is the home of Gina Giannetti, web designer, developer and aspiring top scorer on Ms<a href="http://www.free80sarcade.com/mspacman.php" target="_blank">.</a>Pacman.</h1>
+		<h1 id="h1">Gina.dev is the home of Gina Giannetti, web designer, developer and aspiring top scorer on Ms<a onclick="myFunction()">.</a>Pacman.</h1>
+		<div id="iframe" style="display: none; position: absolute; left: 600px; top: 250px; border: solid 2px #000;">
+    		<div style="overflow:hidden;">
+        		<iframe src="http://www.free80sarcade.com/mspacman.php" scrolling="yes" style="width: 800px; height: 740px; margin-top: -300px; margin-left: -160px;">
+        		</iframe>
+    		</div>
+		</div>
 	</div>
 	<hr width="10%">
 	<div class="main">
@@ -27,7 +47,7 @@
 			<p>
 			<span class="drop-cap">I</span> built my first website when I was 12. At the time I was obsessed with playing <em>The Sims</em> on a huge PC my parents had in the hallway of our house. I felt like the wardrobe in the original Sims was seriously lacking and thus set about creating some new clothes in Photoshop that were loosely based on 80s nostalgia; I recall baby pink jump suits and those little high heels that Barbie used to wear (maybe she still does). I saved my sartorial creations in a zip file alongside .txt instructions on how to inject them into your game by dropping them into the relevant foler in C:/Program Files. I then uploaded this onto my website as downloadable content and <em>voila!</em> Gina Fashion, my first web site, was born. I knew nothing about SEO, driving traffic and other than begging other (wildy more successful) Sim sites to put my banner in the footer of their site... I had virtually no hits. 
 			</p>
-			<p>Then, like so many, as I got older (still on the same PC in the hallway) I honed my skills on myspace, creating a snazzy profile with a cat that followed your mouse around the page. At the time there wasn't much in the way of wysiwyg editors so the only people that strayed away from template HTML were those who genuinely wanted to learn, for no reason other than having a bright pink scrollbar (RIP scrollbars). </p>
+			<p>Then, like so many, as I got older (still on the same PC in the hallway) I honed my skills on myspace, creating a snazzy profile with <a onclick="catFunction()">a cat that followed your mouse around the page</a>. At the time there wasn't much in the way of wysiwyg editors so the only people that strayed away from template HTML were those who genuinely wanted to learn, for no reason other than having a bright pink scrollbar (RIP scrollbars). </p>
 		</div>
 		<div class="two-columns padding">	
 			<p>The internet was a simpler place in the 90s and I still do credit the chat room <em>Web Building Chat</em> on AOL with much of my knowledge.</p>
@@ -61,6 +81,7 @@
 	<hr width="10%">
 	<div class="contact">
 		<h2>Hit me up, <a class="email" href="mailto:hello@gina.dev" target="_blank">hello@gina.dev</a></h2>
+		<h3>P.S There are 8 easter eggs on this page, can you find all of them?</h2>
 	</div>
 </body>
 </html>	

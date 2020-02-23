@@ -1,7 +1,13 @@
+
 html {
 	background-color: #f6e8e5;
 	font-family: 'Roboto', ariel, sans-serif;
 }
+
+.cat {cursor: url(http://cur.cursors-4u.net/nature/nat-10/nat927.ani), 
+	url(http://cur.cursors-4u.net/nature/nat-10/nat927.png), 
+	auto !important;}
+
 
 /*Main Text Section*/
 
