@@ -14,9 +14,35 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
 	<link rel="manifest" href="assets/site.webmanifest">
-	<!-- Cat Cursor -->
-	<!-- <style type="text/css">* {cursor: url(http://cur.cursors-4u.net/nature/nat-10/nat927.ani), url(http://cur.cursors-4u.net/nature/nat-10/nat927.png), auto !important;}</style> -->
 	<script>
+	function frenchFunction() {
+    var fren = document.getElementById('french');
+    var frenTwo = document.getElementById('french-two');
+    var eng = document.getElementById('english');
+    var engTwo = document.getElementById('english-two');
+    if (fren.style.display === 'none') {
+        fren.style.display = 'block';
+        frenTwo.style.display = 'block';
+        eng.style.display = 'none';
+        engTwo.style.display = 'none';
+    } else {
+        x.style.display = 'none';
+    }
+	}
+	function spanishFunction() {
+    var span = document.getElementById('spanish');
+    var spanTwo = document.getElementById('spanish-two');
+    var eng = document.getElementById('english');
+    var engTwo = document.getElementById('english-two');
+    if (span.style.display === 'none') {
+        span.style.display = 'block';
+        spanTwo.style.display = 'block';
+        eng.style.display = 'none';
+        engTwo.style.display = 'none';
+    } else {
+        x.style.display = 'none';
+    }
+	}
 	function myFunction() {
     var x = document.getElementById('iframe');
     if (x.style.display === 'none') {
@@ -43,17 +69,39 @@
 	</div>
 	<hr width="10%">
 	<div class="main">
-		<div class="two-columns">
+		<div class="two-columns" id="english" style="display: flex;"> 
 			<p>
 			<span class="drop-cap">I</span> built my first website when I was 12. At the time I was obsessed with playing <em>The Sims</em> on a huge PC my parents had in the hallway of our house. I felt like the wardrobe in the original Sims was seriously lacking and thus set about creating some new clothes in Photoshop that were loosely based on 80s nostalgia; I recall baby pink jump suits and those little high heels that Barbie used to wear (maybe she still does). I saved my sartorial creations in a zip file alongside .txt instructions on how to inject them into your game by dropping them into the relevant foler in C:/Program Files. I then uploaded this onto my website as downloadable content and <em>voila!</em> Gina Fashion, my first web site, was born. I knew nothing about SEO, driving traffic and other than begging other (wildy more successful) Sim sites to put my banner in the footer of their site... I had virtually no hits. 
 			</p>
 			<p>Then, like so many, as I got older (still on the same PC in the hallway) I honed my skills on myspace, creating a snazzy profile with <a onclick="catFunction()">a cat that followed your mouse around the page</a>. At the time there wasn't much in the way of wysiwyg editors so the only people that strayed away from template HTML were those who genuinely wanted to learn, for no reason other than having a bright pink scrollbar (RIP scrollbars). </p>
 		</div>
-		<div class="two-columns padding">	
+		<div class="two-columns padding" id="english-two" style="display: flex;">	
 			<p>The internet was a simpler place in the 90s and I still do credit the chat room <em>Web Building Chat</em> on AOL with much of my knowledge.</p>
-			<p>I tucked away my love of web design to pursue a career in Fashion, I then did a degree in French and Spanish because I couldn't decide on anything and thought more languages can't possibly be a bad thing. Then I hit a wall trying to figure out what would make me happy when I looked back to the last time I worked on something for no reason other than the absolute love of it.</p>
+			<p>I tucked away my love of web design to pursue a career in Fashion, I then did a degree in <a onclick="frenchFunction()">French</a> and <a onclick="spanishFunction()">Spanish</a> because I couldn't decide on anything and thought more languages can't possibly be a bad thing. Then I hit a wall trying to figure out what would make me happy when I looked back to the last time I worked on something for no reason other than the absolute love of it.</p>
 			<p>Nowadays I've done courses, in person and Codecademy to fill in the gaps and give me a more current view of web design. I enjoy HTML, CSS, Javascript, SASS, Command Line, Git and I'm always hungry for more. I am excited to see where the latest technology is taking us but I remember where I started and I hold it very dear to my heart. I also still remember my <a href="http://www.neopets.com/" target="_blank">neopets</a> password but I guess some internet gems are probably best left unearthed.</p>
+		</div>
+		<div class="two-columns" id="french" style="display: none;">
+			<p>
+			<span class="drop-cap">J'ai</span> construit mon premier site Web à l'âge de 12 ans. À l'époque, j'étais obsédé par <em>les Sims</em> sur un énorme PC que mes parents avaient dans le couloir de notre maison. J'avais l'impression que la garde-robe des Sims originaux manquait sérieusement et j'ai donc décidé de créer de nouveaux vêtements dans Photoshop qui étaient vaguement basés sur la nostalgie des années 80; Je me souviens des combinaisons de bébé rose et de ces petits talons hauts que Barbie portait (peut-être qu'elle le fait toujours). J'ai enregistré mes créations vestimentaires dans un fichier zip avec des instructions .txt sur la façon de les injecter dans votre jeu en les déposant dans le foler correspondant dans C: / Program Files. J'ai ensuite téléchargé ceci sur mon site Web en tant que contenu téléchargeable et le tour est joué! Gina Fashion, mon premier site web, est né. Je ne savais rien du SEO, de la génération de trafic et autre que de mendier d'autres sites Sim (follement plus performants) pour mettre ma bannière dans le pied de page de leur site ... Je n'ai eu pratiquement aucun succès.
+			</p>
+			<p>Puis, comme tant d'autres, en vieillissant (toujours sur le même PC dans le couloir), j'ai perfectionné mes compétences sur myspace, créant un profil élégant avec <a onclick="catFunction()">un chat qui a suivi votre souris sur la page</a>. À l'époque, les éditeurs wysiwyg n'étaient pas très nombreux, donc les seules personnes qui s'éloignaient du modèle HTML étaient celles qui voulaient vraiment apprendre, sans autre raison que d'avoir une barre de défilement rose vif (barres de défilement RIP). </p>
+		</div>
+		<div class="two-columns padding" id="french-two" style="display: none;">	
+			<p>L'Internet était un endroit plus simple dans les années 90 et je reconnais toujours la salle de chat <em>Web Building Chat</em> sur AOL avec une grande partie de mes connaissances.</p>
+			<p>J'ai caché mon amour de la conception web pour poursuivre une carrière dans la mode, j'ai ensuite fait un diplôme en français et en espagnol parce que je ne pouvais rien décider et pensais que plus de langues ne pouvaient pas être une mauvaise chose. Puis j'ai frappé un mur en essayant de comprendre ce qui me rendrait heureux quand je repense à la dernière fois où j'ai travaillé sur quelque chose sans autre raison que son amour absolu.</p>
+			<p>De nos jours, j'ai suivi des cours, en personne et Codecademy pour combler les lacunes et me donner une vue plus actuelle de la conception Web. J'aime HTML, CSS, Javascript, SASS, Command Line, Git et j'ai toujours faim de plus. Je suis ravi de voir où les dernières technologies nous mènent, mais je me souviens d'où j'ai commencé et je le tiens très à cœur. Je me souviens également de mon mot de passe <a href="http://www.neopets.com/" target="_blank">neopets</a>, mais je suppose que certaines gemmes Internet sont probablement mieux déterrées.</p>
 		</div>	
+		<div class="two-columns" id="spanish" style="display: none;">
+			<p>
+			<span class="drop-cap">Construí</span> mi primer sitio web cuando tenía 12 años. En ese momento estaba obsesionado con jugar <em> The Sims </em> en una gran PC que mis padres tenían en el pasillo de nuestra casa. Sentí que el vestuario de los Sims originales carecía de seriedad y, por lo tanto, se propuso crear algunas prendas nuevas en Photoshop que se basaban libremente en la nostalgia de los 80; Recuerdo los trajes de salto de color rosa bebé y esos pequeños tacones altos que Barbie solía usar (tal vez todavía lo hace). Guarde mis creaciones de vestuario en un archivo zip junto con instrucciones .txt sobre cómo inyectarlas en su juego colocándolas en el foler relevante en C: / Archivos de programa. Luego cargué esto en mi sitio web como contenido descargable y nació <em> voila! </em> Gina Fashion, mi primer sitio web. No sabía nada sobre SEO, dirigir el tráfico y aparte de rogarle a otros sitios de Sim (mucho más exitosos) que pusieran mi banner en el pie de página de su sitio ... Prácticamente no tuve visitas.
+			</p>
+			<p>Luego, como muchos, a medida que crecía (todavía en la misma PC en el pasillo) perfeccioné mis habilidades en myspace, creando un perfil elegante con <a onclick="catFunction()"> un gato que seguía su mouse alrededor del página </a>. En ese momento no había mucho en el camino de los editores de wysiwyg, por lo que las únicas personas que se alejaron de la plantilla HTML fueron aquellos que realmente querían aprender, sin otra razón que tener una barra de desplazamiento rosa brillante (barras de desplazamiento RIP). </p>
+		</div>
+		<div class="two-columns padding" id="spanish-two" style="display: none;">	
+			<p>Internet era un lugar más simple en los años 90 y todavía le doy crédito a la sala de chat <em> Web Building Chat </em> en AOL con gran parte de mi conocimiento.</p>
+			<p>Dejé de lado mi amor por el diseño web para seguir una carrera en Moda, luego obtuve un título en francés y español porque no podía decidir nada y pensaba que más idiomas no podían ser algo malo. Luego golpeé una pared tratando de descubrir qué me haría feliz cuando volví a la última vez que trabajé en algo sin otra razón que el amor absoluto.</p>
+			<p>Hoy en día he realizado cursos, en persona y Codecademy para llenar los vacíos y darme una visión más actualizada del diseño web. Disfruto de HTML, CSS, Javascript, SASS, línea de comandos, Git y siempre tengo hambre de más. Estoy emocionado de ver a dónde nos lleva la última tecnología, pero recuerdo dónde comencé y lo aprecio mucho en mi corazón. También recuerdo la contraseña de mi <a href="http://www.neopets.com/" target="_blank">neopets</a>, pero creo que es mejor dejar algunas gemas de Internet desenterradas.</p>
+		</div>		
 	</div>
 	<hr width="10%">
 	<h2>Work Examples</h2>
@@ -81,7 +129,7 @@
 	<hr width="10%">
 	<div class="contact">
 		<h2>Hit me up, <a class="email" href="mailto:hello@gina.dev" target="_blank">hello@gina.dev</a></h2>
-		<h3>P.S There are 8 easter eggs on this page, can you find all of them?</h2>
+		<h3>P.S There are 5 easter eggs on this page, can you find all of them?</h2>
 	</div>
 </body>
 </html>	

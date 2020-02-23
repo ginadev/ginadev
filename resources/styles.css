@@ -67,6 +67,7 @@ a{
 	padding-top: 1em;
 }
 
+
 /*Example Work Section*/
 
 .examples{
@@ -79,10 +80,6 @@ img{
 	width: 350px;
 	height: 200px;
 	position: absolute;
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(100%);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
 }
 
 .image{
@@ -108,11 +105,6 @@ img{
   opacity: 1;
 }
 
-
-.examples div:hover img {
-	-webkit-filter: grayscale(0);
-	filter: grayscale(0);
-}
 
 /*Contact Section*/
 
