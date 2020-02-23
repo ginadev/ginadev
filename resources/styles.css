@@ -101,7 +101,7 @@ img{
 
 .overlay:hover{
 	transition: all 0.8s ease;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.7);
   opacity: 1;
 }
 

@@ -43,6 +43,26 @@
         x.style.display = 'none';
     }
 	}
+	function englishFunction(){
+	var span = document.getElementById('spanish');
+    var spanTwo = document.getElementById('spanish-two');
+    var eng = document.getElementById('english');
+    var engTwo = document.getElementById('english-two');
+    var fren = document.getElementById('french');
+    var frenTwo = document.getElementById('french-two');
+    	if(span.style.display === 'none' && eng.style.display === 'none'){
+    		fren.style.display = 'none';
+    		frenTwo.style.display = 'none';
+    		eng.style.display = 'block';
+    		engTwo.style.display = 'block';
+    	}
+    	else if(fren.style.display === 'none' && eng.style.display === 'none'){
+    		span.style.display = 'none';
+    		spanTwo.style.display = 'none';
+    		eng.style.display = 'block';
+    		engTwo.style.display = 'block';
+    	}
+    }
 	function myFunction() {
     var x = document.getElementById('iframe');
     if (x.style.display === 'none') {
@@ -59,7 +79,7 @@
 </head>
 <body id="cat">	
 	<div>
-		<h1 id="h1">Gina.dev is the home of Gina Giannetti, web designer, developer and aspiring top scorer on Ms<a onclick="myFunction()">.</a>Pacman.</h1>
+		<h1 id="h1"><a href="http://gina.dev">Gina.dev</a> is the home of Gina Giannetti, web designer, developer and aspiring top scorer on Ms<a onclick="myFunction()">.</a>Pacman.</h1>
 		<div id="iframe" style="display: none; position: absolute; left: 600px; top: 250px; border: solid 2px #000;">
     		<div style="overflow:hidden;">
         		<iframe src="http://www.free80sarcade.com/mspacman.php" scrolling="yes" style="width: 800px; height: 740px; margin-top: -300px; margin-left: -160px;">
@@ -88,7 +108,7 @@
 		</div>
 		<div class="two-columns padding" id="french-two" style="display: none;">	
 			<p>L'Internet était un endroit plus simple dans les années 90 et je reconnais toujours la salle de chat <em>Web Building Chat</em> sur AOL avec une grande partie de mes connaissances.</p>
-			<p>J'ai caché mon amour de la conception web pour poursuivre une carrière dans la mode, j'ai ensuite fait un diplôme en français et en espagnol parce que je ne pouvais rien décider et pensais que plus de langues ne pouvaient pas être une mauvaise chose. Puis j'ai frappé un mur en essayant de comprendre ce qui me rendrait heureux quand je repense à la dernière fois où j'ai travaillé sur quelque chose sans autre raison que son amour absolu.</p>
+			<p>J'ai caché mon amour de la conception web pour poursuivre une carrière dans la mode, j'ai ensuite fait un diplôme en <a onclick="englishFunction()">français et en espagnol</a> parce que je ne pouvais rien décider et pensais que plus de langues ne pouvaient pas être une mauvaise chose. Puis j'ai frappé un mur en essayant de comprendre ce qui me rendrait heureux quand je repense à la dernière fois où j'ai travaillé sur quelque chose sans autre raison que son amour absolu.</p>
 			<p>De nos jours, j'ai suivi des cours, en personne et Codecademy pour combler les lacunes et me donner une vue plus actuelle de la conception Web. J'aime HTML, CSS, Javascript, SASS, Command Line, Git et j'ai toujours faim de plus. Je suis ravi de voir où les dernières technologies nous mènent, mais je me souviens d'où j'ai commencé et je le tiens très à cœur. Je me souviens également de mon mot de passe <a href="http://www.neopets.com/" target="_blank">neopets</a>, mais je suppose que certaines gemmes Internet sont probablement mieux déterrées.</p>
 		</div>	
 		<div class="two-columns" id="spanish" style="display: none;">
@@ -99,7 +119,7 @@
 		</div>
 		<div class="two-columns padding" id="spanish-two" style="display: none;">	
 			<p>Internet era un lugar más simple en los años 90 y todavía le doy crédito a la sala de chat <em> Web Building Chat </em> en AOL con gran parte de mi conocimiento.</p>
-			<p>Dejé de lado mi amor por el diseño web para seguir una carrera en Moda, luego obtuve un título en francés y español porque no podía decidir nada y pensaba que más idiomas no podían ser algo malo. Luego golpeé una pared tratando de descubrir qué me haría feliz cuando volví a la última vez que trabajé en algo sin otra razón que el amor absoluto.</p>
+			<p>Dejé de lado mi amor por el diseño web para seguir una carrera en Moda, luego obtuve un título en <a onclick="englishFunction()">francés y español</a> porque no podía decidir nada y pensaba que más idiomas no podían ser algo malo. Luego golpeé una pared tratando de descubrir qué me haría feliz cuando volví a la última vez que trabajé en algo sin otra razón que el amor absoluto.</p>
 			<p>Hoy en día he realizado cursos, en persona y Codecademy para llenar los vacíos y darme una visión más actualizada del diseño web. Disfruto de HTML, CSS, Javascript, SASS, línea de comandos, Git y siempre tengo hambre de más. Estoy emocionado de ver a dónde nos lleva la última tecnología, pero recuerdo dónde comencé y lo aprecio mucho en mi corazón. También recuerdo la contraseña de mi <a href="http://www.neopets.com/" target="_blank">neopets</a>, pero creo que es mejor dejar algunas gemas de Internet desenterradas.</p>
 		</div>		
 	</div>
