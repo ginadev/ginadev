@@ -9,31 +9,35 @@ body{
 padding: 50px 50px 50px 100px;
 }
 
-h1, h2{
+h1, h2, .drop-cap, .email a{
 	font-family: 'Lobster', ariel, sans-serif;
 }
 
+.drop-cap{
+	font-size: 3em;
+}
+
 hr{
-	border-top: 4px solid black;
+	border-top: 0.25em solid black;
 	text-align: left;
 	margin-left: 0;
-	margin: 20px 0;
+	margin: 2em 0;
 }
 
 h1{
-	font-size: 40px;
+	font-size: 3em;
 	padding: 220px 100px;
 	width: 300px;
 }
 
 h2{
-	font-size: 40px;
-	padding: 40px 0;
+	font-size: 2em;
+	padding: 0 0 1em 0;
 }
 
 p{
-	font-size: 25px;
-	padding-bottom: 20px;
+	padding: 0 20px 20px 0;
+	line-height: 1.5em;
 
 }
 
@@ -45,6 +49,16 @@ a{
 .main{
 	display: flex;
 	flex-wrap: wrap;
+}
+
+.two-columns{
+	display: flex;
+	flex-direction: column;
+	max-width: 400px;
+}
+
+.padding{
+	padding-top: 1em;
 }
 
 /*Example Work Section*/
@@ -84,7 +98,7 @@ img{
 
 .overlay:hover{
 	transition: all 0.8s ease;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.8);
   opacity: 1;
 }
 
@@ -100,10 +114,6 @@ img{
 	text-decoration: underline;
 }
 
-
-.email a{
-	font-size: 20px;
-}
 
 a:hover{
 	color: pink;
@@ -124,5 +134,9 @@ a:hover{
 
   .read-more {
     display: none;
+  }
+
+  .padding{
+  	padding-top: 
   }
 }
