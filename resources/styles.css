@@ -119,7 +119,92 @@ a:hover{
 
 h3{
 	font-size: 0.7em;
+
 }
+
+/*iPad Media Query*/
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) and (orientation : portrait) { 
+
+.two-columns{
+	max-width: 370px;
+}
+
+
+h1, p{
+	padding: 0;
+}
+
+body{
+	padding: 10px;
+}
+
+img{
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.overlay:hover{
+  opacity: 0;
+}
+
+  .read-more {
+    display: none;
+  }
+
+  .padding{
+  	padding-top: 
+  }
+
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) { 
+
+.two-columns{
+	max-width: 1000px;
+}
+
+.examples{
+	justify-content: flex-start;
+}
+
+p{
+	padding: 0;
+}
+
+body{
+	padding: 10px;
+}
+
+img{
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.overlay:hover{
+  opacity: 0;
+}
+
+  .read-more {
+    display: none;
+  }
+
+  .padding{
+  	padding-top: 
+  }
+
+}
+
+/*Mobile Media Query*/
 
 @media only screen and (max-width: 1024px) {
 
