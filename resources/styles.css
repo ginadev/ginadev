@@ -19,6 +19,16 @@ h1, h2, .drop-cap, .email a{
 	font-family: 'Lobster', ariel, sans-serif;
 }
 
+iframe{
+	padding-top: 200px;
+}
+
+.box{
+	display: flex;
+	flex-wrap: wrap;
+
+}
+
 .drop-cap{
 	font-size: 3em;
 }
@@ -155,6 +165,10 @@ img{
 	transition: .3s ease-in-out;
 }
 
+iframe{
+	padding-top: 0;
+}
+
 .overlay:hover{
   opacity: 0;
 }
@@ -209,6 +223,10 @@ img{
 	transition: .3s ease-in-out;
 }
 
+iframe{
+	padding-top: 0;
+}
+
 .overlay:hover{
   opacity: 0;
 }
@@ -252,6 +270,10 @@ img{
 	filter: grayscale(0);
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
+}
+
+iframe{
+	padding-top: 0;
 }
 
 .desktop-only{
