@@ -52,6 +52,10 @@ a{
 	text-decoration: none;
 }
 
+.easter-egg{
+	color: #444544;
+}
+
 .main{
 	display: flex;
 	flex-wrap: wrap;
@@ -67,6 +71,9 @@ a{
 	padding-top: 1em;
 }
 
+.mobile-only{
+	display:none;
+}
 
 /*Example Work Section*/
 
@@ -160,6 +167,18 @@ img{
   	padding-top: 
   }
 
+    .desktop-only{
+	display:none;
+}
+
+.mobile-only{
+	display:inline;
+}
+
+.extra-egg{
+	color: #000000;
+}
+
 }
 
 @media only screen 
@@ -202,6 +221,18 @@ img{
   	padding-top: 
   }
 
+  .desktop-only{
+	display:none;
+}
+
+.mobile-only{
+	display:inline;
+}
+
+.extra-egg{
+	color: #000000;
+}
+
 }
 
 /*Mobile Media Query*/
@@ -223,6 +254,14 @@ img{
 	transition: .3s ease-in-out;
 }
 
+.desktop-only{
+	display:none;
+}
+
+.mobile-only{
+	display:inline;
+}
+
 .overlay:hover{
   opacity: 0;
 }
@@ -234,4 +273,8 @@ img{
   .padding{
   	padding-top: 
   }
+
+  .extra-egg{
+	color: #000000;
+}
 }
