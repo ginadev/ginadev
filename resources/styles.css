@@ -139,6 +139,10 @@ h3{
 
 }
 
+.this{
+	font-weight: bold;
+}
+
 /*iPad Media Query*/
 
 @media only screen 
