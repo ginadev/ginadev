@@ -12,7 +12,7 @@ html {
 /*Main Text Section*/
 
 body{
-padding: 50px 50px 50px 100px;
+padding: 50px 50px 50px 100px; /*If you change this remember to change it in the JS*/
 }
 
 h1, h2, .drop-cap, .email a{
@@ -39,7 +39,7 @@ hr{
 
 h1{
 	font-size: 3em;
-	padding: 220px 100px;
+	padding: 200px 100px; /*If you change this remember to change it in the JS*/
 	width: 300px;
 }
 
