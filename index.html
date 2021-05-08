@@ -69,20 +69,33 @@
     var h = document.getElementById('title');
     var c = document.getElementById('content');
     var cat = document.getElementById('cat');
-    var i = document.getElementById('iframeid')
+    var i = document.getElementById('iframeid');
+    var j = document.getElementById('pacman_home');
     if (x.style.display === 'none') {
         x.style.display = 'block';
-	     if ( $(window).width() > 1000) {
-	        x.style.padding = '0';
-	        i.style.padding = '0';
-	        h.style.color = 'pink';
-	        h.style.padding = '20px';
-	        c.style.display = 'none';
+        
+        
+	     if (window.innerWidth > 1000) {
+	        h.style.position = 'relative';
+	        h.style.top = '200px';
+	        h.style.padding = '0';
 	        cat.style.padding = '0';
+	        c.style.display = 'none';
+	        j.style.display = 'block';
 	    }
 
     } else {
+    	if (window.innerWidth > 1000){
+    		cat.style.padding = '50px 50px 50px 100px';
+       		h.style.position = 'auto';
+       		h.style.top = '0';
+        	h.style.padding = '220px 100px';
+        	j.style.display = 'none';
+        	c.style.display = 'block';
+    	}
         x.style.display = 'none';
+        
+        
     }
 	}
 	function catFunction()
@@ -96,8 +109,13 @@
 <body id="cat">	
 	<div class="box">
 		<div>
-			<h1 id="title"><a href="http://gina.dev">Gina.dev</a> is the home of Gina Giannetti, aspiring web developer and top scorer on Ms<a class="easter-egg" onclick="myFunction()">.</a>Pacman.</h1>
+			<h1 id="title"><a href="http://gina.dev">Gina.dev</a> is the home of Gina Giannetti, aspiring web developer and top scorer on Ms<a class="easter-egg" onclick="myFunction()">.</a>Pacman.
+			</h1>
+			
 		</div>	
+
+		<h2 style="display:none;" id="pacman_home"><a onclick="myFunction()">Return to page.</a></h2>
+
 		<div id="iframe" style="display: none;">
     		<div style="overflow:hidden;">
         		<iframe id="iframeid" src="https://www.webretrogames.com/pacman-html5.php" scrolling="yes" height="600px" width="370px">
@@ -161,7 +179,7 @@
 			</div>	
 			
 			
-		<!-- 	<div class="box">
+			<!-- 	<div class="box">
 				<div class="image"><a class="item" href="https://ginadev.github.io/tortoiseshelloptics/" target="_blank"><img src="assets/tortoiseshelloptics.png"><span class="overlay"><span class="read-more">Tortoiseshell Optics Responsive Site</span></span></a></div>
 			</div>	 -->
 			<div class="box">

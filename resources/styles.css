@@ -19,9 +19,6 @@ h1, h2, .drop-cap, .email a{
 	font-family: 'Lobster', ariel, sans-serif;
 }
 
-iframe{
-	padding-top: 200px;
-}
 
 .box{
 	display: flex;
