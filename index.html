@@ -36,8 +36,8 @@
   body{
     margin:0;
     font-family: "Pixelify Sans", sans-serif;
-    font-weight: 300;                /* lighter overall feel */
-    letter-spacing: 0.15px;          /* a touch of air */
+    font-weight: 300;                
+    letter-spacing: 0.15px;         
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     color: var(--ink);
@@ -46,7 +46,6 @@
     overflow-x:hidden;
   }
 
-  /* Subtle pixel-checker overlay to mimic CRT */
   body::after{
     content:"";
     position:fixed; inset:0;
@@ -215,7 +214,7 @@
 .petal{
   position: absolute;
   top: -10%;
-  font-size: 14px;              /* size tweaks happen inline from JS */
+  font-size: 14px;            
   opacity: .9;
   filter: drop-shadow(0 0 3px rgba(255,255,255,.6));
   animation: fall linear forwards;
@@ -243,7 +242,7 @@
   width: 16px;
   height: 16px;
   fill: currentColor;             /* inherits text color */
-  vertical-align: -2px;           /* aligns nicely with text */
+  vertical-align: -2px;        
 }
 .icon.pixel path {
   shape-rendering: crispEdges;   
@@ -352,7 +351,7 @@
           <div class="icons"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
         </div>
         <div class="content">
-          <img src="/assets/ginadev_banner.gif" alt="Gina.dev banner">
+          <img src="https://gina.dev/assets/ginadev_banner.gif" alt="Gina.dev banner">
           <textarea><a href="https://gina.dev"><img src="https://gina.dev/assets/ginadev_banner.gif"></a></textarea>
         </div>
       </section>
