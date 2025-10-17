@@ -254,42 +254,7 @@
   align-items: center;
   gap: 6px;
 }
-
-.honey-wrap{ display:grid; gap:12px }
-.honey-scene{
-  display:grid; justify-items:center; align-items:center; gap:8px;
-  padding:12px;
-  border:2px dashed var(--violet);
-  background: linear-gradient(180deg, rgba(255,255,255,.85), rgba(255,255,255,.65));
-  border-radius:10px;
-}
-.honey-sprite{
-  width:140px; height:auto;
-  fill:#5c3a21;              /* dark brown coat */
-  stroke:#7a5ad6; stroke-width:0.8;
-  filter: drop-shadow(2px 2px 0 var(--shadow));
-}
-@media (prefers-reduced-motion: no-preference){
-  .honey-sprite.idle { animation: bob 1.6s ease-in-out infinite; }
-  .honey-sprite.hop  { animation: hop .5s ease-out; }
-  .honey-sprite.wag  { animation: wag .6s ease-in-out 3; transform-origin: 16px 28px; }
-}
-@keyframes bob { 0%,100%{ transform: translateY(0) } 50%{ transform: translateY(-2px) } }
-@keyframes hop { 0%{ transform: translateY(0) } 50%{ transform: translateY(-8px) } 100%{ transform: translateY(0) } }
-@keyframes wag { 0%,100%{ transform: rotate(0deg) } 50%{ transform: rotate(-6deg) } }
-
-.honey-mood{ font-weight:700; background:var(--lav); padding:4px 8px; border:2px solid var(--violet); border-radius:8px }
-
-.honey-bars{ display:grid; gap:8px }
-.bar{ display:grid; grid-template-columns: 70px 1fr; align-items:center; gap:8px }
-.bar span{ font-weight:700 }
-.meter{ height:12px; border:2px solid var(--violet); border-radius:8px; background:rgba(168,143,244,.15); overflow:hidden }
-.meter > div{ height:100%; width:50%; background: linear-gradient(90deg, var(--pink-2), var(--lav-2)) }
-
-.honey-actions .btn{ min-width:84px }
 .tiny{ font-size:.85rem; opacity:.9 }
-
-
 
 @keyframes fall{
   to{
@@ -409,54 +374,7 @@ nobody did, I was 12 and there was no SEO and no way of finding my site. But sti
       </section>
 
       <section id="honey" class="window lacey floral">
-  <div class="titlebar">
-    <span class="label-with-icon">honey — virtual chihuahua</span>
-    <div class="icons"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
-  </div>
-  <div class="content">
-    <div class="honey-wrap">
-      <div class="honey-scene">
-        <!-- tiny pixel-ish chihuahua (SVG) -->
-        <svg id="honeySprite" viewBox="0 0 64 64" class="honey-sprite" role="img" aria-label="Honey the chihuahua">
-          <!-- body -->
-          <rect x="16" y="28" width="32" height="22" rx="4" />
-          <!-- head -->
-          <rect x="36" y="18" width="18" height="16" rx="3" />
-          <!-- ears -->
-          <rect x="52" y="16" width="7" height="7" />
-          <rect x="35" y="16" width="7" height="7" />
-          <!-- eyes -->
-<rect x="42" y="23" width="3" height="3" fill="#2c2137"/>
-<rect x="49" y="23" width="3" height="3" fill="#2c2137"/>
-<!-- eyebrows -->
-<rect x="41" y="20" width="4" height="1.5" fill="#fbe9b7"/>
-<rect x="48" y="20" width="4" height="1.5" fill="#fbe9b7"/>
-          <!-- nose -->
-          <rect x="46" y="27" width="2" height="2" fill="#2c2137"/>
-          <!-- tail -->
-          <rect x="16" y="26" width="4" height="10" />
-          <!-- collar -->
-          <rect x="36" y="33" width="18" height="2" fill="#a88ff4"/>
-        </svg>
-        <div id="honeyMood" class="honey-mood">happy ✨</div>
-      </div>
-
-      <div class="honey-bars">
-        <div class="bar"><span>food</span><div class="meter"><div id="barFood"></div></div></div>
-        <div class="bar"><span>water</span><div class="meter"><div id="barWater"></div></div></div>
-        <div class="bar"><span>fun</span><div class="meter"><div id="barFun"></div></div></div>
-        <div class="bar"><span>energy</span><div class="meter"><div id="barEnergy"></div></div></div>
-      </div>
-
-      <div class="honey-actions buttons-row">
-        <button class="btn" id="btnFeed">🍖 feed</button>
-        <button class="btn" id="btnDrink">🫖 water</button>
-        <button class="btn" id="btnPlay">🧸 play</button>
-        <button class="btn" id="btnNap">😴 nap</button>
-        <span class="tiny" id="honeyMsg" aria-live="polite"></span>
-      </div>
-    </div>
-  </div>
+  <iframe src="https://gina.dev/doggy/index.html?embed=1&dog=mini_poodle&variant=1&room=cute" width="324" height="324" style="border:0; aspect-ratio: 1 / 1;" allow="gamepad *"></iframe>
 </section>
       <section id="devlog" class="window">
         <div class="titlebar">
