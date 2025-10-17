@@ -12,6 +12,7 @@
 <link rel="icon" href="assets/AdobeStock_1668008849.png" sizes="32x32" type="image/png">
 <link rel="icon" href="assets/AdobeStock_1668008849.png" sizes="16x16" type="image/png">
 <link rel="apple-touch-icon" href="assets/AdobeStock_1668008849.png" sizes="180x180">
+<script type="module" src="https://cdn.jsdelivr.net/npm/bsky-embed@latest/dist/bsky-embed.es.js" async></script>
 
 
 <style>
@@ -256,9 +257,12 @@
 }
 .tiny{ font-size:.85rem; opacity:.9 }
 
-.honey{
-  width: 648px;
-  height: 648px;
+.dog-scene{
+  display: flex;
+}
+
+.dog-text{
+  padding: 20px;
 }
 
 @keyframes fall{
@@ -350,14 +354,16 @@
           <div class="icons"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
         </div>
         <div class="content buttons-row">
-          <a class="pill" target="_blank" href="https://ginanetty.itch.io" aria-label="itch">itch.io</a>
-          <a class="pill" target="_blank" href="https://www.youtube.com/@ginanetty" aria-label="youtube">youtube</a>
+          <a class="pill" target="_blank" href="https://ginanetta.itch.io" aria-label="itch">itch.io</a>
+          <!-- <a class="pill" target="_blank" href="https://www.youtube.com/@ginanetty" aria-label="youtube">youtube</a> -->
         </div>
       </section>
     </aside>
 
     <!-- RIGHT COLUMN: main windows -->
     <main class="right">
+      
+
       <section id="home" class="window">
         <div class="titlebar">
           <svg class="icon pixel" aria-hidden="true"><use href="#i-home"/></svg>
@@ -378,28 +384,40 @@ nobody did, I was 12 and there was no SEO and no way of finding my site. But sti
         </div>
       </section>
 
-      <section class="honey window lacey floral">
-        <iframe src="https://gina.dev/doggy/index.html?embed=1&dog=mini_poodle&variant=1&room=cute" width="648" height="648" style="border:0; aspect-ratio: 1 / 1;" allow="gamepad *"></iframe>
-      </section>
+      <section class="window lacey floral">
+        <div class="titlebar">
+          <span>My pet doggy</span>
+          <div class="icons"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+        </div>
+        <div class="dog-scene">
+          <iframe src="https://gina.dev/doggy/index.html?embed=1&dog=mini_poodle&variant=1&room=cute" width="324" height="324" style="border:0; aspect-ratio: 1 / 1;" allow="gamepad *"></iframe>
+          <div class="dog-text">
+            <p>I did it! I finally made my first game in Godot, it's a very simple ambient doggy that wanders around, sits down, sleeps and entertains itself.</p>
+            <p>The doggy will just happily live on your page, you can click on them for love, and their food and water can run out, you can click it to top it up, but no harm will ever come to them.</p>
+            <p>If you'd like your own doggy then click the cog in the top right, go back to the menu and select your own dog and room of choice. Then come back to the cog and embed them using the code onto your own page.</p>
+            <p>I hope it brings you joy!</p>
+          </div>
+        </div>
+        </section>
+
       <section id="devlog" class="window">
         <div class="titlebar">
           <svg class="icon pixel" aria-hidden="true"><use href="#i-games"/></svg>
           <span>devlog</span>
           <div class="icons"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
         </div>
-        <div class="content">
-          <article class="card">
-            <h3 style="margin:0 0 6px 0;">First Entry</h3>
-            <p>Well most of my time has been spent making this site!! But once I'm happy with this then I will move onto my first game which will be polishing up the Honey virtual pet above.</p>
-          </article>
-        </div>
+        <bsky-embed
+          username="gina.dev"
+          limit="5"
+          load-more="true"
+        >
+        </bsky-embed>
       </section>
     </main>
 
     <!-- FOOTER -->
     <footer class="site">
       <div class="badges" aria-label="88x31 button bar">
-        <!-- replace src with your actual badges; using placeholders -->
         <img alt="made with love" src="https://dummyimage.com/88x31/ffffff/7a5ad6&text=made+with+%E2%99%A1">
         <a href="https://lovesick.cafe/grrrl" target="_blank"><img alt="Made by a girl" src="https://loves1ck.neocities.org/img/sozai/grrrl/madebya-04-1.png"></a>
       </div>
@@ -586,6 +604,5 @@ nobody did, I was 12 and there was no SEO and no way of finding my site. But sti
     load(0);
 
 </script>
-<script src="assets/honey.js"></script>
 </body>
 </html>
