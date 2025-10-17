@@ -1,212 +1,591 @@
-<!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Gina.dev</title>
-	 <meta name="description" content="Gina.dev is the home of Gina Giannetti, web developer based in Somerset, UK.">
-  	<meta name="author" content="Gina Giannetti">
-
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
-  	<link href="https://fonts.googleapis.com/css?family=Lobster|Roboto&display=swap" rel="stylesheet">
-  	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
-
-	<link rel="stylesheet" type="text/css" href="resources/reset.css">
-	<link rel="stylesheet" type="text/css" href="resources/styles.css">
-	<!--- icon --->
-	<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-	<link rel="manifest" href="assets/site.webmanifest">
-	<script>
-	function frenchFunction() {
-    var fren = document.getElementById('french');
-    var frenTwo = document.getElementById('french-two');
-    var eng = document.getElementById('english');
-    var engTwo = document.getElementById('english-two');
-    if (fren.style.display === 'none') {
-        fren.style.display = 'block';
-        frenTwo.style.display = 'block';
-        eng.style.display = 'none';
-        engTwo.style.display = 'none';
-    } else {
-        x.style.display = 'none';
-    }
-	}
-	function spanishFunction() {
-    var span = document.getElementById('spanish');
-    var spanTwo = document.getElementById('spanish-two');
-    var eng = document.getElementById('english');
-    var engTwo = document.getElementById('english-two');
-    if (span.style.display === 'none') {
-        span.style.display = 'block';
-        spanTwo.style.display = 'block';
-        eng.style.display = 'none';
-        engTwo.style.display = 'none';
-    } else {
-        x.style.display = 'none';
-    }
-	}
-	function englishFunction(){
-	var span = document.getElementById('spanish');
-    var spanTwo = document.getElementById('spanish-two');
-    var eng = document.getElementById('english');
-    var engTwo = document.getElementById('english-two');
-    var fren = document.getElementById('french');
-    var frenTwo = document.getElementById('french-two');
-    	if(span.style.display === 'none' && eng.style.display === 'none'){
-    		fren.style.display = 'none';
-    		frenTwo.style.display = 'none';
-    		eng.style.display = 'block';
-    		engTwo.style.display = 'block';
-    	}
-    	else if(fren.style.display === 'none' && eng.style.display === 'none'){
-    		span.style.display = 'none';
-    		spanTwo.style.display = 'none';
-    		eng.style.display = 'block';
-    		engTwo.style.display = 'block';
-    	}
-    }
-	function myFunction() {
-    var x = document.getElementById('iframe');
-    var h = document.getElementById('title');
-    var c = document.getElementById('content');
-    var cat = document.getElementById('cat');
-    var i = document.getElementById('iframeid');
-    var j = document.getElementById('pacman_home');
-    if (x.style.display === 'none') {
-        x.style.display = 'block';
-        
-        
-	     if (window.innerWidth > 1000) {
-	        h.style.position = 'relative';
-	        h.style.top = '200px';
-	        h.style.padding = '0';
-	        cat.style.padding = '0';
-	        c.style.display = 'none';
-	        j.style.display = 'block';
-	    }
-
-    } else {
-    	if (window.innerWidth > 1000){
-    		cat.style.padding = '50px 50px 50px 100px';
-       		h.style.position = 'auto';
-       		h.style.top = '0';
-        	h.style.padding = '200px 100px';
-        	j.style.display = 'none';
-        	c.style.display = 'block';
-    	}
-        x.style.display = 'none';
-        
-        
-    }
-	}
-	function catFunction()
-	{
-    document.getElementById('cat').setAttribute("class", "cat");
-	}
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Gina's Cosmic Corner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+<!-- Favicons -->
+<link rel="icon" href="assets/AdobeStock_1668008849.png" sizes="32x32" type="image/png">
+<link rel="icon" href="assets/AdobeStock_1668008849.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="assets/AdobeStock_1668008849.png" sizes="180x180">
 
 
-	</script>
+<style>
+  /* ------------------ Theme ------------------ */
+  :root{
+    --pink: #ffd3ec;
+    --pink-2:#fbc4d9;
+    --lav:#e9ddff;
+    --lav-2:#d9ccff;
+    --violet:#a88ff4;
+    --purple:#7a5ad6;
+    --ink:#2c2137;
+    --white:#fff;
+    --shadow:#c1b3ff;
+  }
+
+  
+
+  * { box-sizing: border-box; }
+  html,body{ height:100%; }
+  body{
+    margin:0;
+    font-family: "Pixelify Sans", sans-serif;
+    font-weight: 300;                /* lighter overall feel */
+    letter-spacing: 0.15px;          /* a touch of air */
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    color: var(--ink);
+    background-image: url('assets/backgrounds/pink_grid.jpeg');
+    background-size: cover;
+    overflow-x:hidden;
+  }
+
+  /* Subtle pixel-checker overlay to mimic CRT */
+  body::after{
+    content:"";
+    position:fixed; inset:0;
+    background:
+      repeating-linear-gradient(0deg, rgba(255,255,255,.06) 0 2px, transparent 2px 4px),
+      repeating-linear-gradient(90deg, rgba(255,255,255,.04) 0 2px, transparent 2px 4px);
+    pointer-events:none;
+    mix-blend-mode: soft-light;
+  }
+
+  /* Floating twinkle stars */
+  .stars{ position:fixed; inset:0; pointer-events:none; z-index:0; }
+  .star{
+    position:absolute; 
+    background:#fff; 
+    border-radius:50%;
+    box-shadow:0 0 8px 2px rgba(255,255,255,.7);
+    animation: twinkle 3.6s ease-in-out infinite alternate;
+  }
+  @keyframes twinkle { from{opacity:.35; transform:scale(.75)} to{opacity:1; transform:scale(1.2)} }
+
+  /* ------------------ Layout ------------------ */
+  .wrap{
+    position:relative; z-index:1;
+    max-width:1200px; margin:40px auto; padding:0 16px;
+    display:grid; gap:16px;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: calc(100vh - 80px);
+  }
+  header.site{
+    grid-column:1 / -1;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .logo{
+    font-family:"Press Start 2P", cursive;
+    font-size: clamp(18px, 2.2vw, 28px);
+    color: var(--ink);
+    text-shadow: 2px 2px var(--violet);
+    text-align: center;
+    letter-spacing:1px;
+    padding:20px 14px; 
+    margin: 30px 0;
+    border:3px solid var(--violet);
+    background: #ffffff;
+  }
+
+  aside.left { grid-column:1; display:flex; flex-direction:column; gap:16px; }
+  main.right { grid-column:2; display:flex; flex-direction:column; gap:16px; }
+  footer.site { grid-column:1 / -1; }
+
+  /* ------------------ Window component ------------------ */
+  .window{
+    background: #ffffff;
+    border:2px solid var(--violet);
+    box-shadow: 3px 3px 0 0 var(--shadow);
+    overflow:hidden;
+  }
+
+    .titlebar.pixel {
+    font-family: "Press Start 2P", cursive;
+    text-shadow: 1px 1px var(--violet);
+    background:
+        linear-gradient(180deg, var(--lav-2), var(--lav)),
+        var(--tile-flower);
+    background-size: auto, 16px 16px;
+}
+
+  .titlebar{
+    color: #ffffff;
+    display:flex; align-items:center; gap:10px;
+    padding:8px 10px;
+    border:2px solid var(--violet);
+    font-weight:600; text-transform:lowercase;
+    letter-spacing:.3px;
+    font-family: "Press Start 2P", cursive;
+    font-size: 12px;
+    margin: 4px;
+    background-color:#dec2ee;
+  }
+  .titlebar .icons{
+    margin-left:auto; display:flex; gap:6px;
+  }
+  .titlebar .dot{
+    width:14px; height:14px; border:2px solid var(--violet);
+    background: var(--pink);
+    border-radius:3px; box-shadow: inset -2px -2px 0 0 rgba(0,0,0,.06);
+  }
+  .window .content{ 
+    padding:14px 14px 18px; 
+    border:2px solid var(--violet);
+    margin: 4px
+}
+
+  /* Nav pills */
+  .nav-grid{
+    display:flex; flex-wrap:wrap; gap:8px;
+  }
+  .pill{
+    border:2px solid var(--violet);
+    background: var(--lav);
+    padding:6px 10px; 
+    border-radius:8px;
+    font-weight:600; 
+    text-decoration:none; 
+    color:var(--ink);
+    box-shadow: 3px 3px 0 0 var(--shadow);
+    transition: transform .12s ease, background .12s ease;
+  }
+  .pill:hover{ transform: translate(-2px, -2px); background: var(--pink-2); }
+
+  /* Example “bio” list styling */
+  dl{ display:grid; grid-template-columns: auto 1fr; gap:16px 10px; margin:0; }
+  dt{ font-weight:700 }
+  dd{ margin:0; }
+
+  /* Main content blocks */
+  .card{
+    border:2px dashed var(--violet);
+    background: rgba(255,255,255,.6);
+    padding:12px;
+  }
+  .player .cover{
+    width:64px; 
+    height:64px; 
+    border:2px solid var(--violet); 
+    border-radius:8px;
+    /* background: linear-gradient(135deg, var(--pink), var(--lav)); */
+    background-repeat: no-repeat;      
+    background-position: center;       
+    background-size: cover;            
+  }
+  .buttons-row{ display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+  .btn{
+    border:2px solid var(--violet); background:var(--lav-2);
+    padding:6px 10px; border-radius:8px; font-weight:700; cursor:pointer;
+    box-shadow: 3px 3px 0 0 var(--shadow);
+  }
+
+  /* Footer 88x31 button bar */
+  .badges{
+    display:flex; gap:8px; flex-wrap:wrap; justify-content:center;
+    padding:14px;
+    border:3px solid var(--violet);
+    background: #ffffff;
+    box-shadow: 6px 6px 0 0 var(--shadow);
+  }
+  .badges img{
+    height:50px; image-rendering: pixelated;
+    border:2px solid var(--violet);
+    background:#fff;
+    box-shadow: 3px 3px 0 0 var(--shadow);
+  }
+
+  /* Responsive: stack columns on small screens */
+  @media (max-width: 860px){
+    .wrap{ grid-template-columns: 1fr; }
+    aside.left, main.right { grid-column:1; }
+  }
+
+  /* Falling petals/stars layer */
+.rain{
+  position: fixed; inset: 0; pointer-events: none; z-index: 0;
+}
+
+.petal{
+  position: absolute;
+  top: -10%;
+  font-size: 14px;              /* size tweaks happen inline from JS */
+  opacity: .9;
+  filter: drop-shadow(0 0 3px rgba(255,255,255,.6));
+  animation: fall linear forwards;
+}
+
+.progress{
+  width: 200px; height: 10px; margin:10px 0;
+  border:2px solid var(--violet); border-radius:8px;
+  background:
+    repeating-linear-gradient(90deg, rgba(168,143,244,.2) 0 8px, rgba(255,211,236,.2) 8px 16px);
+  box-shadow: 2px 2px 0 0 var(--shadow);
+  cursor: pointer;
+}
+.progress .bar{
+  height: 100%; width: 0%;
+  background: linear-gradient(90deg, var(--pink-2), var(--lav-2));
+  border-radius:6px;
+}
+.time{ font-size: .9rem; opacity: .9 }
+.vol { display:inline-flex; align-items:center; gap:6px; font-size:.85rem; margin-top:6px }
+.vol input{ accent-color: var(--violet); }
+
+/* Pixel-style SVG icons */
+.icon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;             /* inherits text color */
+  vertical-align: -2px;           /* aligns nicely with text */
+}
+.icon.pixel path {
+  shape-rendering: crispEdges;   
+}
+
+.titlebar .label-with-icon,
+.pill .label-with-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.tiny{ font-size:.85rem; opacity:.9 }
+
+.honey{
+  width: 648px;
+  height: 648px;
+}
+
+@keyframes fall{
+  to{
+    transform: translateY(120vh) rotate(360deg);
+    opacity: .95;
+  }
+}
+
+/* respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .petal{ animation: none; }
+}
+
+</style>
 </head>
-<body id="cat">	
-	<div class="box">
-		<div>
-			<h1 id="title"><a href="http://gina.dev">Gina.dev</a> is the home of Gina Giannetti, web developer and top scorer on Ms<a class="easter-egg" onclick="myFunction()">.</a>Pacman.
-			</h1>
-			
-		</div>	
+<body>
+  <!-- <button id="modeToggle" class="mode-toggle" type="button" aria-label="toggle dark mode">
+  <svg class="icon pixel" aria-hidden="true"><use href="#i-moon"/></svg>
+  <span>dark mode</span>
+</button> -->
 
-		<h2 style="display:none;" id="pacman_home"><a onclick="myFunction()">Return to page.</a></h2>
+  <div class="stars" id="stars"></div>
+  <div class="rain" aria-hidden="true"></div>
 
-		<div id="iframe" style="display: none;">
-    		<div style="overflow:hidden;">
-        		<iframe id="iframeid" src="https://www.webretrogames.com/pacman-html5.php" scrolling="yes" height="600px" width="370px">
-        		</iframe>
-    		</div>
-		</div>
-	</div>
-	<div id="content">	
-		<hr width="10%">
-		<div class="main">
-			<div class="two-columns" id="english" style="display: flex;"> 
-				<p>
-				<span class="drop-cap">I</span> built my first website when I was 12. At the time I was obsessed with playing <em>The Sims</em> on a huge PC my parents had in the hallway of our house. I felt like the wardrobe in the original Sims was seriously lacking and thus set about creating some new clothes in Photoshop that were loosely based on 80s nostalgia. I recall baby pink jump suits and those little high heels that Barbie used to wear (maybe she still does). I saved my sartorial creations in a zip file alongside .txt instructions on how to inject them into your game by dropping them into the relevant folder in C:/Program Files. I then uploaded this onto my website as downloadable content and <em>voila!</em> Gina Fashion, my first web site, was born. I knew nothing about SEO, driving traffic and despite begging other (wildy more successful) Sim sites to put my banner in the footer of their site... I had virtually no hits. 
-				</p>
-				<p>Then, as I got older (still on the same PC in the hallway) I honed my skills on myspace, creating a snazzy profile with <a class="easter-egg extra-egg" onclick="catFunction()">a cat that followed your mouse around the page</a>. At the time there wasn't much in the way of wysiwyg editors so the only people that strayed away from template HTML were those who genuinely wanted to learn, for no reason other than having a bright pink scrollbar (RIP scrollbars). </p>
-			</div>
-			<div class="two-columns padding" id="english-two" style="display: flex;">	
-				<p>The internet was a simpler place in the 90s and I still do credit the chat room <em>Web Building Chat</em> on AOL with much of my knowledge.</p>
-				<p>I tucked away my love of web design to pursue a career in Fashion, I then did a degree in <a class="easter-egg" onclick="frenchFunction()">French</a> and <a class="easter-egg" onclick="spanishFunction()">Spanish</a> because I couldn't decide on anything concrete and thought more languages can't possibly be a bad thing. Then I hit a wall trying to figure out what would make me happy. I looked back to the last time I worked on something for no reason other than the absolute love of it.</p>
-				<p>This brings us to today where I still enjoy doing this things. I am comfortable working with HTML, CSS, JavaScript (including JQuery and TypeSript), Github, SQL and I'm always learning more. I am excited to see where the latest technology is taking us but I remember where I started and I hold it very dear to my heart. I also still remember my <a href="http://www.neopets.com/" target="_blank" class="easter-egg">neopets</a> password but I guess some internet gems are probably best left unearthed.</p>
-			</div>
-			<div class="two-columns" id="french" style="display: none;">
-				<p>
-				<span class="drop-cap">J'ai</span> construit mon premier site Web à l'âge de 12 ans. À l'époque, j'étais obsédé par <em>les Sims</em> sur un énorme PC que mes parents avaient dans le couloir de notre maison. J'avais l'impression que la garde-robe des Sims originaux manquait sérieusement et j'ai donc décidé de créer de nouveaux vêtements dans Photoshop qui étaient vaguement basés sur la nostalgie des années 80; Je me souviens des combinaisons de bébé rose et de ces petits talons hauts que Barbie portait (peut-être qu'elle le fait toujours). J'ai enregistré mes créations vestimentaires dans un fichier zip avec des instructions .txt sur la façon de les injecter dans votre jeu en les déposant dans le dossier correspondant dans C: / Program Files. J'ai ensuite téléchargé ceci sur mon site Web en tant que contenu téléchargeable et le tour est joué! Gina Fashion, mon premier site web, est né. Je ne savais rien du SEO, de la génération de trafic et autre que de mendier d'autres sites Sim (follement plus performants) pour mettre ma bannière dans le pied de page de leur site ... Je n'ai eu pratiquement aucun succès.
-				</p>
-				<p>Puis, comme tant d'autres, en vieillissant (toujours sur le même PC dans le couloir), j'ai perfectionné mes compétences sur myspace, créant un profil élégant avec <a class="easter-egg extra-egg" onclick="catFunction()">un chat qui a suivi votre souris sur la page</a>. À l'époque, les éditeurs wysiwyg n'étaient pas très nombreux, donc les seules personnes qui s'éloignaient du modèle HTML étaient celles qui voulaient vraiment apprendre, sans autre raison que d'avoir une barre de défilement rose vif (barres de défilement RIP). </p>
-			</div>
-			<div class="two-columns padding" id="french-two" style="display: none;">	
-				<p>L'Internet était un endroit plus simple dans les années 90 et je reconnais toujours la salle de chat <em>Web Building Chat</em> sur AOL avec une grande partie de mes connaissances.</p>
-				<p>J'ai caché mon amour de la conception web pour poursuivre une carrière dans la mode, j'ai ensuite fait un diplôme en <a class="easter-egg" onclick="englishFunction()">français et en espagnol</a> parce que je ne pouvais rien décider et pensais que plus de langues ne pouvaient pas être une mauvaise chose. Puis j'ai frappé un mur en essayant de comprendre ce qui me rendrait heureux quand je repense à la dernière fois où j'ai travaillé sur quelque chose sans autre raison que son amour absolu.</p>
-				<p>De nos jours, j'ai suivi des cours, en personne et Codecademy pour combler les lacunes et me donner une vue plus actuelle de la conception Web. J'aime HTML, CSS, JavaScript, SASS, Command Line, Git et j'ai toujours faim de plus. Je suis ravi de voir où les dernières technologies nous mènent, mais je me souviens d'où j'ai commencé et je le tiens très à cœur. Je me souviens également de mon mot de passe <a class="easter-egg" href="http://www.neopets.com/" target="_blank">neopets</a>, mais je suppose que certaines gemmes Internet sont probablement mieux déterrées.</p>
-			</div>	
-			<div class="two-columns" id="spanish" style="display: none;">
-				<p>
-				<span class="drop-cap">Construí</span> mi primer sitio web cuando tenía 12 años. En ese momento estaba obsesionado con jugar <em> The Sims </em> en una gran PC que mis padres tenían en el pasillo de nuestra casa. Sentí que el vestuario de los Sims originales carecía de seriedad y, por lo tanto, se propuso crear algunas prendas nuevas en Photoshop que se basaban libremente en la nostalgia de los 80; Recuerdo los trajes de salto de color rosa bebé y esos pequeños tacones altos que Barbie solía usar (tal vez todavía lo hace). Guarde mis creaciones de vestuario en un archivo zip junto con instrucciones .txt sobre cómo inyectarlas en su juego colocándolas en el carpeta relevante en C: / Archivos de programa. Luego cargué esto en mi sitio web como contenido descargable y nació <em> voila! </em> Gina Fashion, mi primer sitio web. No sabía nada sobre SEO, dirigir el tráfico y aparte de rogarle a otros sitios de Sim (mucho más exitosos) que pusieran mi banner en el pie de página de su sitio ... Prácticamente no tuve visitas.
-				</p>
-				<p>Luego, como muchos, a medida que crecía (todavía en la misma PC en el pasillo) perfeccioné mis habilidades en myspace, creando un perfil elegante con <a class="easter-egg extra-egg" onclick="catFunction()"> un gato que seguía su mouse alrededor del página </a>. En ese momento no había mucho en el camino de los editores de wysiwyg, por lo que las únicas personas que se alejaron de la plantilla HTML fueron aquellos que realmente querían aprender, sin otra razón que tener una barra de desplazamiento rosa brillante (barras de desplazamiento RIP). </p>
-			</div>
-			<div class="two-columns padding" id="spanish-two" style="display: none;">	
-				<p>Internet era un lugar más simple en los años 90 y todavía le doy crédito a la sala de chat <em> Web Building Chat </em> en AOL con gran parte de mi conocimiento.</p>
-				<p>Dejé de lado mi amor por el diseño web para seguir una carrera en Moda, luego obtuve un título en <a class="easter-egg" onclick="englishFunction()">francés y español</a> porque no podía decidir nada y pensaba que más idiomas no podían ser algo malo. Luego golpeé una pared tratando de descubrir qué me haría feliz cuando volví a la última vez que trabajé en algo sin otra razón que el amor absoluto.</p>
-				<p>Hoy en día he realizado cursos, en persona y Codecademy para llenar los vacíos y darme una visión más actualizada del diseño web. Disfruto de HTML, CSS, JavaScript, SASS, línea de comandos, Git y siempre tengo hambre de más. Estoy emocionado de ver a dónde nos lleva la última tecnología, pero recuerdo dónde comencé y lo aprecio mucho en mi corazón. También recuerdo la contraseña de mi <a class="easter-egg" href="http://www.neopets.com/" target="_blank">neopets</a>, pero creo que es mejor dejar algunas gemas de Internet desenterradas.</p>
-			</div>		
-		</div>
-		<hr width="10%">
-		<h2>Work Examples</h2>
-		<div class="examples">
-			<div class="box">
-				<div class="image"><a class="item" href="https://citywire.com/elite-companies/company-ratings" target="_blank"><img src="assets/elite-companies.png"><span class="overlay"><span class="read-more">Citywire Elite Companies Database</span>
-				</span></a></div>
-			</div>
-			<div class="box">
-				<div class="image"><a class="item" href="https://review2021.citywireevents.com/" target="_blank"><img src="assets/Citywire_Events.png"><span class="overlay"><span class="read-more">Citywire Events Site</span>
-				</span></a></div>
-			</div>
-			<div class="box">
-				<div class="image"><a class="item" href="https://survey.citywireengage.com/" target="_blank"><img src="assets/Citywire_Survey.png"><span class="overlay"><span class="read-more">Citywire Survey Site</span>
-				</span></a></div>
-			</div>
-			<div class="box">
-				<div class="image"><a class="item" href="https://ginadev.github.io/cardgame/" target="_blank"><img src="assets/cardgame.png"><span class="overlay"><span class="read-more">Memory Style Cardgame using JavaScript</span>
-				</span></a></div>
-			</div>
-			<div class="box">
-				<div class="image"><a class="item" href="https://ginadev.github.io/colmaracademy/" target="_blank"><img src="assets/colmar.png"><span class="overlay"><span class="read-more">Colmar Academy Example Responsive Site</span></span></a></div>
-			</div>	
-			<div class="box">
-				<div class="image"><a class="item" href="MM.html"><img src="assets/MM.png"><span class="overlay"><span class="read-more">Mindfulness Monthly Emails</span>
-				</span></a></div>
-			</div>
-			<div class="box">
-				<div class="image"><a class="item" href="https://ginadev.github.io/mytimes/" target="_blank"><img src="assets/mytimes.png"><span class="overlay"><span class="read-more">MyTimes Example Responsive Site</span></span></a></div>
-			</div>	
-			<!-- 	<div class="box">
-				<div class="image"><a class="item" href="https://ginadev.github.io/tortoiseshelloptics/" target="_blank"><img src="assets/tortoiseshelloptics.png"><span class="overlay"><span class="read-more">Tortoiseshell Optics Responsive Site</span></span></a></div>
-			</div>	 -->
-			<div class="box">
-				<div class="image"><a class="item" href="https://ginadev.github.io/teacozy/" target="_blank"><img src="assets/teacozy.png"><span class="overlay"><span class="read-more">Tea Cozy Example Site</span></span></a></div>
-			</div>
-			<div class="box">
-				<div class="image"><a class="item" href="https://ginadev.github.io/secretagentsupply/" target="_blank"><img src="assets/secretagent.png"><span class="overlay"><span class="read-more">Secret Agent Supply Example Site</span></span></a></div>
-			</div>
 
-			
-		</div>
-		<hr width="10%">
-		<div class="contact">
-			<h2>Hit me up, <a class="email" href="mailto:hello@gina.dev" target="_blank">hello@gina.dev</a></h2>
-			<h3>P.S There are <span class="desktop-only">5</span><span class="mobile-only">4</span> easter eggs on <span class="this">this</span> page, can you find all of them?</h3>
-		</div>
-	</div>	
+  <div class="wrap">
+    <header class="site">
+      <div class="logo">✨ Gina’s Cosmic Corner ✨</div>
+    </header>
+
+    <!-- LEFT COLUMN: navigation + bio/contact windows -->
+    <aside class="left">
+      <section class="window">
+        <div class="titlebar">
+          <svg class="icon pixel" aria-hidden="true"><use href="#i-person"/></svg>
+          <span>bio</span>
+          <div class="icons"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+        </div>
+        <div class="content">
+          <dl>
+            <dt>name</dt><dd>Gina</dd>
+            <dt>vibe</dt><dd>pastel celestial, cozy games</dd>
+            <dt>mail</dt><dd><a class="pill" href="mailto:hello@gina.dev">hello@gina.dev</a></dd>
+          </dl>
+        </div>
+      </section>
+
+        <section id="music" class="window">
+        <div class="titlebar">
+          <svg class="icon pixel" aria-hidden="true"><use href="#i-music"/></svg>
+          <span>music player</span>
+          <div class="icons"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+        </div>
+        <div class="content">
+        <div class="player" role="group" aria-label="music player">
+            <div class="cover" id="cover" aria-hidden="true"></div>
+            <div>
+            <strong>Now Playing:</strong> <em id="trackTitle">—</em><br/>
+            <div class="buttons-row" style="margin-top:8px">
+                <button class="btn" id="prevBtn" type="button" aria-label="previous track">⏮</button>
+                <button class="btn" id="playBtn" type="button" aria-label="play/pause">▶</button>
+                <button class="btn" id="nextBtn" type="button" aria-label="next track">⏭</button>
+                <button class="btn" id="loopBtn" type="button" aria-label="toggle loop">🔁</button>
+            </div>
+
+            <div class="progress" id="progress" aria-label="timeline" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0">
+                <div class="bar" id="bar"></div>
+            </div>
+            <div class="time"><span id="cur">0:00</span> / <span id="dur">0:00</span></div>
+
+            <label class="vol">
+                vol
+                <input id="vol" type="range" min="0" max="1" step="0.01" value="0.9" />
+            </label>
+            </div>
+        </div>
+
+        <!-- hidden audio element the controls drive -->
+        <audio id="audio" preload="metadata"></audio>
+        </div>
+
+      </section>
+
+      <section class="window">
+        <div class="titlebar">
+          <svg class="icon pixel" aria-hidden="true"><use href="#i-contact"/></svg>
+          <span>contact</span>
+          <div class="icons"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+        </div>
+        <div class="content buttons-row">
+          <a class="pill" target="_blank" href="https://ginanetty.itch.io" aria-label="itch">itch.io</a>
+          <a class="pill" target="_blank" href="https://www.youtube.com/@ginanetty" aria-label="youtube">youtube</a>
+        </div>
+      </section>
+    </aside>
+
+    <!-- RIGHT COLUMN: main windows -->
+    <main class="right">
+      <section id="home" class="window">
+        <div class="titlebar">
+          <svg class="icon pixel" aria-hidden="true"><use href="#i-home"/></svg>
+          <span>home</span>
+          <div class="icons"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+        </div>
+        <div class="content">
+          <div class="card">
+            <p>hello! welcome to my tiny pastel corner of the web. expect cozy games, celestial vibes, and
+              occasional tea-fueled devlogs. 🌙🍵</p>
+            <p>When I was about 12 I was exposed to the wonderful world of The Sims, I remember being sad at the lack of <em>fashion</em> in the game so 
+            I went looking around for the in-game clothing, I found a random folder in C:/Program Files where the clothes were stored as image files, I opened Photoshop and I altered them, with like hearts and stars and general
+        pink-ness. I put them back in the folder and I booted up the game wondering if this would work - and it worked! My crazy creations were IN THE ACTUAL GAME. 
+    I found this incredible and absurd and started to try to make clothes that were even more elaborate. I then decided that the world needed my fashion. So I built
+a webite called <b>Gina Fashion</b> where I hosted my creations as downloadable files where people could download them and put them into their own game. Of course 
+nobody did, I was 12 and there was no SEO and no way of finding my site. But still, my love of cosy games, fashion, web development and general hackery was born.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="honey window lacey floral">
+        <iframe src="https://gina.dev/doggy/index.html?embed=1&dog=mini_poodle&variant=1&room=cute" width="648" height="648" style="border:0; aspect-ratio: 1 / 1;" allow="gamepad *"></iframe>
+      </section>
+      <section id="devlog" class="window">
+        <div class="titlebar">
+          <svg class="icon pixel" aria-hidden="true"><use href="#i-games"/></svg>
+          <span>devlog</span>
+          <div class="icons"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+        </div>
+        <div class="content">
+          <article class="card">
+            <h3 style="margin:0 0 6px 0;">First Entry</h3>
+            <p>Well most of my time has been spent making this site!! But once I'm happy with this then I will move onto my first game which will be polishing up the Honey virtual pet above.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site">
+      <div class="badges" aria-label="88x31 button bar">
+        <!-- replace src with your actual badges; using placeholders -->
+        <img alt="made with love" src="https://dummyimage.com/88x31/ffffff/7a5ad6&text=made+with+%E2%99%A1">
+        <a href="https://lovesick.cafe/grrrl" target="_blank"><img alt="Made by a girl" src="https://loves1ck.neocities.org/img/sozai/grrrl/madebya-04-1.png"></a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- pixel icon sprite -->
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <!-- All icons drawn on a 16x16 grid with crisp edges -->
+    <symbol id="i-home" viewBox="0 0 16 16">
+      <path d="M1 7 L8 1 L15 7 V15 H10 V10 H6 V15 H1 Z"/>
+    </symbol>
+    <symbol id="i-contact" viewBox="0 0 16 16">
+      <path d="M1 3 H15 V13 H1 Z M2 4 L8 8 L14 4 Z"/>
+    </symbol>
+    <symbol id="i-games" viewBox="0 0 16 16">
+      <path d="M2 6 h12 v6 H2 Z M4 8 h2 v2 H4 Z M10 8 h2 v2 h-2 Z M7 5 h2 v1 H7 Z"/>
+    </symbol>
+    <symbol id="i-devlog" viewBox="0 0 16 16">
+      <path d="M3 2 h10 v12 H3 Z M5 4 h6 v1 H5 Z M5 6 h6 v1 H5 Z M5 8 h4 v1 H5 Z"/>
+    </symbol>
+    <symbol id="i-links" viewBox="0 0 16 16">
+      <path d="M6 4 h-2 a3 3 0 0 0 0 6 h2 M10 12 h2 a3 3 0 0 0 0-6 h-2
+               M5 8 h6"/>
+    </symbol>
+    <symbol id="i-guestbook" viewBox="0 0 16 16">
+      <path d="M2 3 h10 v10 H2 Z M12 3 h2 v10 h-2 Z M4 5 h6 v1 H4 Z M4 7 h5 v1 H4 Z"/>
+    </symbol>
+    <symbol id="i-person" viewBox="0 0 16 16">
+      <path d="M6 2h4v4H6z M5 7h6v4H5z M4 11h3v3H4z M9 11h3v3H9z"/>
+    </symbol>
+    <symbol id="i-music" viewBox="0 0 16 16">
+      <path d="M9 1h2v8H9z M11 1h3v3h-3z M6 9h5v4H6z"/>
+    </symbol>
+
+  </defs>
+</svg>
+
+
+<script>
+  // sprinkle 40 twinkling stars
+  const box = document.getElementById('stars');
+  for(let i=0;i<40;i++){
+    const s = document.createElement('div');
+    const size = Math.random()*3 + 2;
+    s.className='star';
+    s.style.width = s.style.height = size + 'px';
+    s.style.top = (Math.random()*100) + '%';
+    s.style.left = (Math.random()*100) + '%';
+    s.style.animationDuration = (2 + Math.random()*3) + 's';
+    box.appendChild(s);
+  }
+
+  // --- falling stars/flowers ---
+  const rain = document.querySelector('.rain');
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (!reduce) {
+    const GLYPHS = ['✦','❀','✿','✧','✺','✶'];
+    function spawnPetal(){
+      const s = document.createElement('span');
+      s.className = 'petal';
+      s.textContent = GLYPHS[Math.floor(Math.random()*GLYPHS.length)];
+      const left = Math.random()*100;             // vw
+      const dur = 6 + Math.random()*8;            // seconds
+      const delay = Math.random()*-8;             // negative for staggering
+      const size = 12 + Math.random()*14;         // px
+      s.style.left = left + 'vw';
+      s.style.animationDuration = dur + 's';
+      s.style.animationDelay = delay + 's';
+      s.style.fontSize = size + 'px';
+      s.style.color = Math.random() < .5 ? 'var(--violet)' : 'var(--pink-2)';
+      rain.appendChild(s);
+      // clean up after it falls
+      setTimeout(() => s.remove(), (dur + Math.abs(delay))*1000 + 100);
+    }
+    // initial burst
+    for (let i=0;i<24;i++) spawnPetal();
+    // continuous drizzle
+    setInterval(() => { for (let i=0;i<4;i++) spawnPetal(); }, 1200);
+  }
+
+  const playlist = [
+  { title: "Cozy Evening Coffee Time", src: "assets/music/Cozy-Evening-Coffee-Time_AdobeStock_881792350.wav",cover: "assets/music/covers/blue_moon.jpeg" },
+  { title: "Coffee Lofi",src: "assets/music/Coffee-Lo-Fi_AdobeStock_462873317.wav", cover: "assets/music/covers/coffee.jpeg" },
+  { title: "Cool Chill Summer",src: "assets/music/Cool-Chill-Summer-Lo-Fi-Hip-Hop_AdobeStock_626142598.wav",cover: "assets/music/covers/sun.jpeg" },
+  { title: "Lofi Hip Hop Memories", src: "assets/music/Lo-Fi-Hip-Hop-Memories-Full_AdobeStock_501349166.wav",cover: "assets/music/covers/moon_face.jpeg" },
+  { title: "Luxury Lounge Lofi", src: "assets/music/Luxury-Lounge-Lofi_AdobeStock_1196748025.wav", cover: "assets/music/covers/moon_star.jpeg" },
+  { title: "Summer Fashion Lofi Chill", src: "assets/music/Summer-Fashion-Lo-Fi-Chill-Hip-Hop_AdobeStock_1614197361.wav", cover: "assets/music/covers/fairy.jpeg" }
+];
+
+    const audio = document.getElementById('audio');
+    const titleEl = document.getElementById('trackTitle');
+    const coverEl = document.getElementById('cover');
+    const playBtn = document.getElementById('playBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const loopBtn = document.getElementById('loopBtn');
+    const vol = document.getElementById('vol');
+    const progress = document.getElementById('progress');
+    const bar = document.getElementById('bar');
+    const curEl = document.getElementById('cur');
+    const durEl = document.getElementById('dur');
+
+    let index = 0;
+    let isPlaying = false;
+
+    function mmss(s){
+    if (!isFinite(s)) return "0:00";
+    const m = Math.floor(s/60);
+    const sec = Math.floor(s%60).toString().padStart(2,'0');
+    return `${m}:${sec}`;
+    }
+
+    function load(i){
+    index = (i + playlist.length) % playlist.length;
+    const t = playlist[index];
+    audio.src = t.src;
+    titleEl.textContent = t.title;
+    if (t.cover) coverEl.style.backgroundImage = `url('${t.cover}')`;
+    bar.style.width = '0%';
+    curEl.textContent = "0:00";
+    durEl.textContent = "0:00";
+    }
+
+    function play(){
+    audio.play().then(()=>{
+        isPlaying = true;
+        playBtn.textContent = '⏸';
+        playBtn.setAttribute('aria-label','pause');
+    }).catch(()=>{/* autoplay is blocked until user clicks; ignore */});
+    }
+    function pause(){
+    audio.pause();
+    isPlaying = false;
+    playBtn.textContent = '▶';
+    playBtn.setAttribute('aria-label','play');
+    }
+
+    function togglePlay(){ isPlaying ? pause() : play(); }
+    function prev(){ load(index-1); play(); console.log("prev")}
+    function next(){ load(index+1); play(); console.log("next")}
+    function toggleLoop(){
+    audio.loop = !audio.loop;
+    loopBtn.style.background = audio.loop ? 'var(--pink-2)' : 'var(--lav-2)';
+    loopBtn.ariaLabel = audio.loop ? 'loop on' : 'loop off';
+    }
+
+    /* ---- events ---- */
+    playBtn.addEventListener('click', togglePlay);
+    prevBtn.addEventListener('click', prev);
+    nextBtn.addEventListener('click', next);
+    loopBtn.addEventListener('click', toggleLoop);
+    vol.addEventListener('input', () => audio.volume = +vol.value);
+
+    audio.addEventListener('loadedmetadata', () => {
+    durEl.textContent = mmss(audio.duration);
+    });
+    audio.addEventListener('timeupdate', () => {
+    curEl.textContent = mmss(audio.currentTime);
+    const pct = (audio.currentTime / (audio.duration || 1)) * 100;
+    bar.style.width = pct + '%';
+    progress.setAttribute('aria-valuenow', Math.floor(pct));
+    });
+    audio.addEventListener('ended', () => {
+    if (!audio.loop) next();
+    });
+
+    /* click/seek */
+    function seekAt(clientX){
+    const rect = progress.getBoundingClientRect();
+    const pct = Math.min(Math.max((clientX - rect.left)/rect.width, 0), 1);
+    audio.currentTime = pct * (audio.duration || 0);
+    }
+    progress.addEventListener('click', e => seekAt(e.clientX));
+    progress.addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft') { audio.currentTime = Math.max(0, audio.currentTime - 5); }
+    if (e.key === 'ArrowRight'){ audio.currentTime = Math.min(audio.duration||0, audio.currentTime + 5); }
+    });
+
+    /* init */
+    audio.volume = +vol.value;
+    load(0);
+
+</script>
+<script src="assets/honey.js"></script>
 </body>
 </html>
-<!-- This website was made by Gina Giannetti -->	
