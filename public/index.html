@@ -157,7 +157,7 @@
   }
   .pill:hover{ transform: translate(-2px, -2px); background: var(--pink-2); }
 
-  /* Example “bio” list styling */
+  
   dl{ display:grid; grid-template-columns: auto 1fr; gap:16px 10px; margin:0; }
   dt{ font-weight:700 }
   dd{ margin:0; }
@@ -396,6 +396,7 @@ nobody did, I was 12 and there was no SEO and no way of finding my site. But sti
 
       <section class="window lacey floral">
         <div class="titlebar">
+          <svg class="icon pixel" aria-hidden="true"><use href="#i-dog"/></svg>
           <span>My pet doggy</span>
           <div class="icons"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
         </div>
@@ -440,6 +441,9 @@ nobody did, I was 12 and there was no SEO and no way of finding my site. But sti
     <!-- All icons drawn on a 16x16 grid with crisp edges -->
     <symbol id="i-home" viewBox="0 0 16 16">
       <path d="M1 7 L8 1 L15 7 V15 H10 V10 H6 V15 H1 Z"/>
+    </symbol>
+    <symbol id="i-dog" viewBox="0 0 16 16">
+      <path d="M2 5h4v4H2zM5 4l2 1-2 1zM6 6h2v2H6zM6 9h6v3H6zM6 12h2v3H6zM11 12h2v3h-2zM12 9l3-2v2z"/>
     </symbol>
     <symbol id="i-contact" viewBox="0 0 16 16">
       <path d="M1 3 H15 V13 H1 Z M2 4 L8 8 L14 4 Z"/>
